@@ -1,0 +1,91 @@
+@import-normalize;
+
+:root {
+  --family: 'Nunito Sans', sans-serif;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-b: 18px;
+  --fw-l: 300;
+  --fw-n: 600;
+  --fw-b: 800;
+
+  --radii: 5px;
+
+  /* mobile */
+
+  --fs-sm-m: 12px;
+  --fs-md-m: 14px;
+  --fs-md-b: 16px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+body[data-theme='dark'] {
+  --color-text: hsl(0, 0%, 100%);
+  --color-bg: hsl(207, 26%, 17%);
+  --color-ui-base: hsl(209, 23%, 22%);
+
+  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+}
+
+body[data-theme='light'] {
+  --color-text: hsl(200, 15%, 8%);
+  --color-bg:hsl(0, 0%, 98%);
+  --colors-ui-base: hsl(0, 0%, 100%);
+  
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+body {
+  font-family: var(--family);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-l);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: var(--fs-md-m);
+  }
+}
+
+.container {
+  max-width: 1420px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.ul,
+li,
+p, 
+button {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+}
