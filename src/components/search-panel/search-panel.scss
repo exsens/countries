@@ -1,0 +1,103 @@
+.search-from {
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+
+  &__input {
+    position: relative;
+    background-color: var(--color-bg);
+    box-shadow: var(--shadow);
+    border-radius: var(--radii);
+    overflow: hidden;
+    min-width: 40%;
+
+    input {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 15px 15px 15px 40px;
+      cursor: pointer;
+      background-color: transparent;
+      
+      &::placeholder {
+        color: var(--color-ui-base);
+      }
+
+      &:focus {
+        cursor: text;
+      }
+    }
+
+    svg {
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      top: 0;
+      transform: translate(50%, 45%);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    
+    &__input {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// search region selector
+
+.custom-select {
+
+  &__control {
+   padding: 6px 10px 5px 15px !important;
+   min-width: 200px !important;
+   border: none !important;
+   cursor: pointer !important;
+   background-color: var(--color-bg) !important;
+   box-shadow: var(--shadow) !important;
+   border-radius: var(--radii) !important;
+
+   &--menu-is-open {
+    background-color: var(--color-bg) !important;
+    box-shadow: var(--shadow) !important;
+    border-radius: var(--radii) !important;
+   }
+   
+
+   &--is-focused {
+     border-color: #000 !important;
+   }
+  }
+
+  &__indicator {
+    padding: 7px 0 7px 7px !important;
+  }
+
+  &__indicator-separator {
+    display: none !important;
+  }
+
+  &__menu {
+    border: none !important;
+    padding: 7px 10px 7px 15px !important; 
+  }
+
+  &__menu-list {
+    border: none !important;
+  }
+
+  &__option {
+    cursor: pointer !important;
+    border-radius: var(--radii);
+  }
+
+  @media screen and (max-width: 768px) {
+    &__control {
+      max-width: 220px;
+    }
+  }
+  
+}

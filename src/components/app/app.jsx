@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 
 import Header from '../header/header';
+import Content from '../content/content';
+import SearchPanel from '../search-panel/search-panel';
 
 import './app.scss';
 
@@ -13,7 +15,7 @@ const App = () => {
 
   useEffect(function initTheme() {
     document.body.setAttribute('data-theme', theme);
-  }, [theme])
+  }, [theme]);
 
   return (
     <>
@@ -21,6 +23,9 @@ const App = () => {
         toggleTheme={toggleTheme}
         theme={theme}
       />
+      <Content >
+        <SearchPanel />
+      </Content>
     </>
   );
 };
